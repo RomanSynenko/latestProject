@@ -1,7 +1,9 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import { homeRoutes } from '../routes/homeRoutes';
 
 const HomePage = () => {
-  return <h2>Golovna</h2>;
+  return <section>Test</section>;
 };
 
 export default HomePage;
