@@ -3,14 +3,14 @@ import { useDispatch } from "react-redux";
 
 
 const App = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch()
-  }, [dispatch])
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch()
+  // }, [dispatch])
 
   return (
     <>
-
+<h2>PRO test</h2>
     </>
   )
 }
