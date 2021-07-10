@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import Header from './header/Header';
+import Main from './main/Main';
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -10,9 +11,10 @@ const App = () => {
 
   return (
     <>
-<h2>PRO test</h2>
+      <Header />
+      <Main />
     </>
-  )
-}
+  );
+};
 
 export default App;
