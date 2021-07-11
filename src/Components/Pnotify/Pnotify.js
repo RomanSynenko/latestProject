@@ -4,12 +4,12 @@ import '@pnotify/core/dist/BrightTheme.css';
 const goodRequest = () =>
     success({
         title: 'Success!',
-        delay: 1000
+        delay: 400
     });
 const notFound = () =>
     error({
         title: 'Bad Request',
-        delay: 1000
+        delay: 400
     });
 export default {
     goodRequest,
