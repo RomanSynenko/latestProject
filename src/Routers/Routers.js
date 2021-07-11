@@ -28,21 +28,21 @@ const Pages = () => {
       <Switch>
         {!isAuthenticated && (<PublicRoute path="/" exact component={HomePage} />)}
         <PublicRoute
-          path="/Contacts"
+          path="/contacts"
           component={Contacts}
-          redirectTo="/Contacts"
+          redirectTo="/"
         />
         <PrivateRoute
           path="/"
           exact component={MainPage}
           restricted
-          redirectTo="/MainPage"
+          redirectTo="/"
         />
         <PrivateRoute
           path="/UsefulResources"
           component={UsefulResources}
           restricted
-          redirectTo="/UsefulResourcesPage"
+          redirectTo="/"
         />
       </Switch>
     </Suspense>
