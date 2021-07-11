@@ -13,8 +13,8 @@ const ContactPage = lazy(
   () =>
     import('../pages/ContactPage') /* webpackChunkName: "ContactPage" */,
 );
-const contacts = lazy(
-  () => import('../pages/ContactsPage') /* webpackChunkName: "RegisterPage" */,
+const Contacts = lazy(
+  () => import('../pages/ContactsPage') /* webpackChunkName: "ContactsPage" */,
 );
 
 
@@ -25,7 +25,7 @@ const Pages = () => {
         <PublicRoute path="/" exact component={HomePage} />
         <PublicRoute
           path="/Contacts"
-          component={contacts}
+          component={Contacts}
           restricted
           redirectTo="/contacts"
         />

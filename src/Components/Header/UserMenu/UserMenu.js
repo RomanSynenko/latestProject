@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelector, authOperation } from '../../../redux/auth';
 
+import logOut from '../../../img/sign-out.png'
 import './UserMenuStyle.scss'
 
 const UserMenu = () => {
@@ -15,9 +16,9 @@ const UserMenu = () => {
     );
     return (
         <div className="logout-container">
-            <span className='welcone-text'>Welcome {name} </span>
+            <span className='welcone-text'>{name}</span>
             <button className="logout-button" type="button" onClick={LogOut}>
-                Log out
+                <img src={logOut} alt="logOut" />
             </button>
         </div>
     );
