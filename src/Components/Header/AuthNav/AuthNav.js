@@ -12,7 +12,7 @@ const AuthNav = () => {
                 to="/contacts"
                 exact
             >
-                Contacts
+                Контакты
             </NavLink>
         </nav>
     );

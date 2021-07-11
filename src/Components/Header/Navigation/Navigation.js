@@ -20,15 +20,35 @@ const Navigation = () => {
 
                 />
             </NavLink>
+
+            {isAuthenticated && (<NavLink
+                className='link'
+                activeClassName='activeLink'
+                to="/mainPage"
+                exact
+            >
+                Главная
+            </NavLink>
+            )}
+            {isAuthenticated && (<NavLink
+                className='link'
+                activeClassName='activeLink'
+                to="/UsefulResources"
+                exact
+            >
+                Полезные материалы
+            </NavLink>
+            )}
             {isAuthenticated && (<NavLink
                 className='link'
                 activeClassName='activeLink'
                 to="/contacts"
                 exact
             >
-                Contacts
+                Контакты
             </NavLink>
             )}
+
         </nav>
     )
 }

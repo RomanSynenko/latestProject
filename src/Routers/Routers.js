@@ -9,14 +9,16 @@ import Loader from '../Components/Loader';
 const HomePage = lazy(
   () => import('../pages/HomePage') /* webpackChunkName: "HomePage" */,
 );
-const ContactPage = lazy(
+const MainPage = lazy(
   () =>
-    import('../pages/ContactPage') /* webpackChunkName: "ContactPage" */,
+    import('../pages/MainPage') /* webpackChunkName: "MainPage" */,
 );
 const Contacts = lazy(
   () => import('../pages/ContactsPage') /* webpackChunkName: "ContactsPage" */,
 );
-
+const UsefulResources = lazy(
+  () => import('../pages/UsefulResourcesPage') /* webpackChunkName: "UsefulResourcesPage" */,
+);
 
 const Pages = () => {
   return (
@@ -26,8 +28,19 @@ const Pages = () => {
         <PublicRoute
           path="/Contacts"
           component={Contacts}
-          restricted
           redirectTo="/contacts"
+        />
+        <PrivateRoute
+          path="/MainPage"
+          component={MainPage}
+          restricted
+          redirectTo="/MainPage"
+        />
+        <PrivateRoute
+          path="/UsefulResources"
+          component={UsefulResources}
+          restricted
+          redirectTo="/UsefulResourcesPage"
         />
       </Switch>
     </Suspense>
