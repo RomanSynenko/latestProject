@@ -7,13 +7,15 @@
     justify-content: space-between;
     align-items: center;
     > nav {
-        font-size: 20px;
-        width: 150px;
+        width: 100%;
         display: flex;
-        // justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         > a {
             text-decoration: none;
         }
+    }
+    .registerContainer {
+        margin-left: 68px;
     }
 }

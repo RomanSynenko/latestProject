@@ -5,14 +5,14 @@ import './AuthNavStyle.scss'
 
 const AuthNav = () => {
     return (
-        <nav>
+        <nav className='contacts-public'>
             <NavLink
                 className="link"
                 activeClassName="activeLink"
                 to="/contacts"
                 exact
             >
-                Контакты
+                Контакт
             </NavLink>
         </nav>
     );

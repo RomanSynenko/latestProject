@@ -3,7 +3,8 @@ import { Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import Loader from '../Components/Loader';
-
+import { useSelector } from 'react-redux';
+import { authSelector } from '../redux/auth';
 
 
 const HomePage = lazy(
@@ -21,18 +22,19 @@ const UsefulResources = lazy(
 );
 
 const Pages = () => {
+  const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
   return (
     <Suspense fallback={<Loader />}>
       <Switch>
-        <PublicRoute path="/" exact component={HomePage} />
+        {!isAuthenticated && (<PublicRoute path="/" exact component={HomePage} />)}
         <PublicRoute
           path="/Contacts"
           component={Contacts}
-          redirectTo="/contacts"
+          redirectTo="/Contacts"
         />
         <PrivateRoute
-          path="/MainPage"
-          component={MainPage}
+          path="/"
+          exact component={MainPage}
           restricted
           redirectTo="/MainPage"
         />

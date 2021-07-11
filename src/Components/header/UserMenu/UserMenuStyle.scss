@@ -2,11 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 260px;
+    width: 190px;
+    .short-name {
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .welcone-text {
-        font-size: 20px;
-        font-weight: bold;
-        font-style: italic;
     }
     .logout-button {
         width: 56px;

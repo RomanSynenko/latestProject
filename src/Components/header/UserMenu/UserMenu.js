@@ -8,6 +8,7 @@ import './UserMenuStyle.scss'
 const UserMenu = () => {
     const dispatch = useDispatch();
     const name = useSelector(authSelector.getUserName);
+    const shortName = name.slice(0, 1)
     const LogOut = useCallback(
         () => {
             dispatch(authOperation.logOut())
@@ -16,6 +17,7 @@ const UserMenu = () => {
     );
     return (
         <div className="logout-container">
+            <span className='short-name'>{shortName}</span>
             <span className='welcone-text'>{name}</span>
             <button className="logout-button" type="button" onClick={LogOut}>
                 <img src={logOut} alt="logOut" />
