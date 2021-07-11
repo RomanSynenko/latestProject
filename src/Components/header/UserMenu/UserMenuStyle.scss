@@ -1,0 +1,23 @@
+.logout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+    .welcone-text {
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .logout-button {
+        width: 56px;
+        height: 70px;
+        border: none;
+        transition: 1.2s;
+        background: transparent;
+        border-left: 1px solid #e2e3e5;
+        &:hover {
+            transition: 1.2s;
+            background: #ff6b09;
+        }
+    }
+}

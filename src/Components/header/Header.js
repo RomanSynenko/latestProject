@@ -1,23 +1,23 @@
 import React from 'react';
-import { mainRoutes } from '../../routes/mainRoutes';
-import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import Navigation from './Navigation'
+import './Header.scss';
+import { authSelector } from '../../redux/auth';
+import UserMenu from './UserMenu';
+import AuthNav from './AuthNav';
 
 const Header = () => {
-  return (
-    <header>
-      <nav>
-        <ul>
-          {mainRoutes.map(({ name, exact, path }) => (
-            <li key={path}>
-              <NavLink to={path} exact={exact}>
-                {name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  );
+    const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
+    return (
+        <header className="header-container">
+            <Navigation />
+            <div className='registerContainer'>
+                {isAuthenticated ? <UserMenu /> : <AuthNav />}
+            </div>
+        </header>
+    );
 };
+
 
 export default Header;

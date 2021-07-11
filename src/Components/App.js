@@ -1,20 +1,25 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import Header from './header/Header';
-import Main from './main/Main';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { authOperation } from "../redux/auth";
+import Pages from "../Routers/Routers";
+import Container from "./Container";
+
+import Header from "./Header";
 
 const App = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch()
-  // }, [dispatch])
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(authOperation.getCurrentUser())
+  }, [dispatch])
 
   return (
     <>
       <Header />
-      <Main />
+      <Container>
+        <Pages />
+      </Container>
     </>
-  );
-};
+  )
+}
 
 export default App;
