@@ -1,5 +1,5 @@
 {
-  "name": "lesson1",
+  "name": "latest-preject",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,6 @@
     "modern-normalize": "^1.0.0",
     "node-sass": "^5.0.0",
     "pnotify": "^5.2.0",
-    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-loader-spinner": "^4.0.0",
@@ -23,6 +22,7 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
+    "styled-components": "^5.3.0",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.0"
   },
@@ -53,7 +53,10 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.2.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "prop-types": "^15.7.2",
     "redux-devtools-extension": "^2.13.9"
   }
 }
