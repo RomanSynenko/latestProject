@@ -6,7 +6,7 @@ import Pages from "../Routers/Routers";
 
 import Container from "./Container";
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./header";
 
 const App = () => {
   const dispatch = useDispatch();
