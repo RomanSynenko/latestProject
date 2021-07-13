@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import Navigation from './Navigation'
+import Navigation from './Navigation';
 import './Header.scss';
 import { authSelector } from '../../redux/auth';
 import UserMenu from './UserMenu';
