@@ -13,8 +13,53 @@
   color: #000000;
 }
 
-#chart1 {
-  svg rect {
-    fill: #f5f6fb;
+#reactgooglegraph-1 {
+  height: 500px;
+  svg {
+    rect {
+      fill: #f5f6fb;
+    }
+
+    g {
+      g[column-id='Correct'] {
+        circle {
+          fill: yellow;
+        }
+      }
+    }
+
+    g {
+      g[column-id='Incorrect'] {
+        circle {
+          fill: black;
+        }
+      }
+    }
+
+    g {
+      path[stroke='#a52b0e'] {
+        fill: yellow;
+        stroke: yellow;
+      }
+      path[stroke='#dc3912'] {
+        fill: yellow;
+        stroke: yellow;
+      }
+      text {
+        fill: black;
+      }
+    }
+
+    g {
+      path[stroke='#264d99'] {
+        fill: rgb(180, 120, 9);
+        stroke: rgb(180, 120, 9);
+      }
+
+      path[stroke='#3366cc'] {
+        fill: orange;
+        stroke: orange;
+      }
+    }
   }
 }

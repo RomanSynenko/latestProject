@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { GoogleCharts } from 'google-charts';
+import { Chart } from 'react-google-charts';
 import './styles/results.scss';
-import { grey } from 'chalk';
 
 const Results = () => {
   const [results, setResults] = useState(0);
@@ -10,30 +9,25 @@ const Results = () => {
 
   useEffect(() => {});
 
-  GoogleCharts.load(drawChart);
-
-  function drawChart() {
-    const data = GoogleCharts.api.visualization.arrayToDataTable([
-      ['Chart thing', 'Chart amount'],
-      ['Correct', 74],
-      ['Incorrect', 26],
-    ]);
-
-    const pie_1_chart = new GoogleCharts.api.visualization.PieChart(
-      refDiv.current,
-    );
-
-    pie_1_chart.draw(data);
-  }
-
   return (
     <div className="resultsContainer">
       <h1 className="resultsTitle">Results</h1>
-      <div
-        id="chart1"
-        ref={refDiv}
-        style={{ height: 500, background: '#E5E5E5' }}
-      ></div>
+      <Chart
+        width={'100%'}
+        height={'300px'}
+        chartType="PieChart"
+        loader={<div>Loading Chart</div>}
+        data={[
+          ['Task', 'Hours per Day'],
+          ['Correct', 75],
+          ['Incorrect', 25],
+        ]}
+        options={{
+          title: 'My Daily Activities',
+          is3D: true,
+        }}
+        rootProps={{ 'data-testid': '2' }}
+      />
     </div>
   );
 };
