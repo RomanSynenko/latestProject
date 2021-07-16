@@ -20,6 +20,12 @@ const Contacts = lazy(
 const UsefulResources = lazy(
   () => import('../pages/UsefulResourcesPage') /* webpackChunkName: "UsefulResourcesPage" */,
 );
+const TheoryTestsPage = lazy(
+  () => import('../pages/TheoryTestsPage') /* webpackChunkName: "TheoryTestsPage" */,
+);
+const PracticeTestsPage = lazy(
+  () => import('../pages/PracticeTestsPage.js') /* webpackChunkName: "PracticeTestsPage" */,
+);
 
 const Pages = () => {
   const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
@@ -30,6 +36,16 @@ const Pages = () => {
         <PublicRoute
           path="/contacts"
           component={Contacts}
+          redirectTo="/"
+        />
+        <PublicRoute
+          path="/tests-theory"
+          component={TheoryTestsPage}
+          redirectTo="/"
+        />
+         <PublicRoute
+          path="/tests-practice"
+          component={PracticeTestsPage}
           redirectTo="/"
         />
         <PrivateRoute

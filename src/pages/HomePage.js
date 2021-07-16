@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -69,6 +69,18 @@ export default function LoginPage() {
 
                 <button className='login-bth' type="submit">Войти</button>
             </form>
+
+            {/*тестові кнопки  */}
+      
+          <ul>
+              <li>
+                  <NavLink to="/tests-practice">QA technical training</NavLink>
+              </li>
+              <li>
+                  <NavLink to="/tests-theory">Testing theory</NavLink>
+              </li>
+          </ul>
+      
         </div>
     );
 

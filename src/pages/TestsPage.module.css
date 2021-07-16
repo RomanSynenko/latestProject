@@ -1,0 +1,99 @@
+.wrap {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+.btnFinish {
+  padding: 17px 55px;
+  background: #ff6b09;
+  border: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 121%;
+  /* display: flex;
+  align-items: center;
+  text-align: center; */
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+.modal {
+  width: 820px;
+  height: 456px;
+  margin: 0 auto;
+  padding: 50px 85px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrap:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.number {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  line-height: 121%;
+  letter-spacing: 0.02em;
+
+  color: #555555;
+}
+
+.item {
+  text-align: left;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.question {
+  margin: 0 0 30px 0;
+  font-size: 22px;
+  line-height: 136%;
+  letter-spacing: 0.02em;
+}
+
+.input {
+  margin-right: 20px;
+}
+.btnPrevious {
+  padding: 9.5px 49px;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+  background: #FF6B09;
+  border: none;
+}
+
+/* .btnPrevious:hover{
+  color: #FF6B09;
+  background: #fff;
+} */
+
+.btnNext{
+  padding: 9.5px 61px;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+  background: #ffffff;
+  border: none;
+}
+
+/* .btnNext:hover{
+  color: #fff;
+  background: #FF6B09;
+} */
+
+
