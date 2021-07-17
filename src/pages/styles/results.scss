@@ -1,0 +1,149 @@
+.resultsContainer {
+  padding-top: 40px;
+
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
+}
+
+.resultsWrapTitle {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 18, 47, 0.15);
+}
+
+.resultsTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+
+.resultsTestName {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.resultsWrapAnswers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width: 767px) {
+      font-size: 11px;
+    }
+  }
+}
+
+.resultsCorrect {
+  padding-right: 20px;
+  border-right: 2px solid rgba(0, 18, 47, 0.15);
+  margin-right: 20px;
+}
+
+.resultsCats {
+  text-align: center;
+}
+
+.resultsText {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.resultsLastText {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 60px;
+}
+
+.btnTryAgain {
+  display: block;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  background: #ff6b09;
+  padding: 17px 28px;
+  min-width: 200px;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: #ffffff;
+    color: #ff6b09;
+    border: 1px solid #ff6b09;
+  }
+}
+
+#reactgooglegraph-1 {
+  height: 700px;
+
+  svg {
+    rect {
+      fill: #f5f6fb;
+    }
+
+    //   g {
+    //     rect {
+    //       width: 100px;
+    //     }
+    //     g[column-id='Correct'] {
+    //       circle {
+    //         fill: #ff6b01;
+    //       }
+    //     }
+    //   }
+
+    //   g {
+    //     g[column-id='Incorrect'] {
+    //       circle {
+    //         fill: #d7d7d7;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // g {
+    //   path[stroke='#a52b0e'] {
+    //     fill: #d7d7d7;
+    //     stroke: #d7d7d7;
+    //   }
+    //   path[stroke='#dc3912'] {
+    //     fill: #d7d7d7;
+    //     stroke: #d7d7d7;
+    //   }
+    //   text {
+    //     fill: black;
+    //   }
+    // }
+
+    // g {
+    //   path[stroke='#264d99'] {
+    //     fill: #c25c13;
+    //     stroke: #c25c13;
+    //   }
+
+    //   path[stroke='#3366cc'] {
+    //     fill: #ff6b01;
+    //     stroke: #ff6b01;
+    //   }
+  }
+}
