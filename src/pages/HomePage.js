@@ -1,14 +1,19 @@
 import { useHistory } from 'react-router-dom';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperation } from '../redux/auth';
+import { resetResult } from '../redux/tests/testsSlice';
 
 export default function LoginPage() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+
+  useEffect(() => {
+    dispatch(resetResult());
+  });
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -38,7 +43,7 @@ export default function LoginPage() {
     history.push({
       pathname: '/tests',
       state: {
-        to: 'QA',
+        toGo: 'QA',
       },
     });
   };
@@ -47,7 +52,7 @@ export default function LoginPage() {
     history.push({
       pathname: '/tests',
       state: {
-        to: 'Theory',
+        toGo: 'Theory',
       },
     });
   };
@@ -90,13 +95,11 @@ export default function LoginPage() {
 
       <ul>
         <li>
-          {/* <NavLink to="/tests">QA technical training</NavLink> */}
           <button type="button" onClick={handleClickQa}>
             QA technical training
           </button>
         </li>
         <li>
-          {/* <NavLink to="/tests">Testing theory</NavLink> */}
           <button type="button" onClick={hadleClickTheory}>
             Testing theory
           </button>

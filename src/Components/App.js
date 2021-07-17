@@ -9,6 +9,7 @@ import Header from './header';
 
 const App = () => {
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(authOperation.getCurrentUser());
   }, [dispatch]);

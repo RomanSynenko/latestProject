@@ -4,7 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { authSelector } from '../../../redux/auth';
 
 import './NavigationStyle.scss';
-import src from '../../../img/logo.png'
+import src from '../../../img/logo.png';
+
 const Navigation = () => {
     const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
     return (

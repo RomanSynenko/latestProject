@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
-import { getPracticeTests, getTheoryTests } from '../services/tests';
+import { getPracticeTests, getTheoryTests } from '../services/tests/getTests';
 import styles from './styles/TestsPage.module.css';
-import { resetResult, resultTest } from '../redux/tests/testsSlice';
+import { resultTest } from '../redux/tests/testsSlice';
 
 const TestsPage = () => {
   const [tests, setTests] = useState([]);
@@ -11,24 +11,20 @@ const TestsPage = () => {
   const resultAnswers = useSelector(state => state.tests);
   const dispatch = useDispatch();
   const history = useHistory();
-  const toGo = useLocation().state?.to;
+  const toGo = useLocation().state?.toGo;
 
   useEffect(() => {
     if (toGo === 'QA') {
       getPracticeTests().then(data => {
         setTests(data);
       });
-      return;
     }
 
     if (toGo === 'Theory') {
       getTheoryTests().then(data => {
         setTests(data);
       });
-      return;
     }
-
-    return () => dispatch(resetResult());
   }, [toGo, dispatch]);
 
   const handleChange = e => {
