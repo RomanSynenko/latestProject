@@ -1,5 +1,9 @@
 .resultsContainer {
   padding-top: 40px;
+
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
 }
 
 .resultsWrapTitle {
@@ -37,6 +41,10 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
+
+    @media screen and (max-width: 767px) {
+      font-size: 11px;
+    }
   }
 }
 
@@ -93,45 +101,49 @@
       fill: #f5f6fb;
     }
 
-    //     g {
-    //       g[column-id='Correct'] {
-    //         circle {
-    //           fill: #ff6b01;
-    //         }
-    //       }
+    //   g {
+    //     rect {
+    //       width: 100px;
     //     }
-
-    //     g {
-    //       g[column-id='Incorrect'] {
-    //         circle {
-    //           fill: #d7d7d7;
-    //         }
-    //       }
-    //     }
-
-    //     g {
-    //       path[stroke='#a52b0e'] {
-    //         fill: #d7d7d7;
-    //         stroke: #d7d7d7;
-    //       }
-    //       path[stroke='#dc3912'] {
-    //         fill: #d7d7d7;
-    //         stroke: #d7d7d7;
-    //       }
-    //       text {
-    //         fill: black;
-    //       }
-    //     }
-
-    //     g {
-    //       path[stroke='#264d99'] {
-    //         fill: #c25c13;
-    //         stroke: #c25c13;
-    //       }
-
-    //       path[stroke='#3366cc'] {
+    //     g[column-id='Correct'] {
+    //       circle {
     //         fill: #ff6b01;
-    //         stroke: #ff6b01;
     //       }
+    //     }
+    //   }
+
+    //   g {
+    //     g[column-id='Incorrect'] {
+    //       circle {
+    //         fill: #d7d7d7;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // g {
+    //   path[stroke='#a52b0e'] {
+    //     fill: #d7d7d7;
+    //     stroke: #d7d7d7;
+    //   }
+    //   path[stroke='#dc3912'] {
+    //     fill: #d7d7d7;
+    //     stroke: #d7d7d7;
+    //   }
+    //   text {
+    //     fill: black;
+    //   }
+    // }
+
+    // g {
+    //   path[stroke='#264d99'] {
+    //     fill: #c25c13;
+    //     stroke: #c25c13;
+    //   }
+
+    //   path[stroke='#3366cc'] {
+    //     fill: #ff6b01;
+    //     stroke: #ff6b01;
+    //   }
   }
 }

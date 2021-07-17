@@ -43,7 +43,7 @@ export default function LoginPage() {
     history.push({
       pathname: '/tests',
       state: {
-        toGo: 'QA',
+        toGo: 'QA technical training',
       },
     });
   };
@@ -52,7 +52,7 @@ export default function LoginPage() {
     history.push({
       pathname: '/tests',
       state: {
-        toGo: 'Theory',
+        toGo: 'Testing theory',
       },
     });
   };

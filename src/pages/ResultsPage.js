@@ -12,18 +12,21 @@ import './styles/results.scss';
 import { resetResult } from '../redux/tests/testsSlice';
 
 const Results = () => {
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState(null);
+  const [nameTest, setNameTest] = useState('');
   const history = useHistory();
   const answers = useSelector(state => state.tests, shallowEqual);
   const toGo = useLocation().state?.toGo;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (toGo === 'QA') {
+    if (toGo === 'QA technical training') {
+      setNameTest(toGo);
       getResultPracticeTests(answers).then(data => setResult(data));
     }
 
-    if (toGo === 'Theory') {
+    if (toGo === 'Testing theory') {
+      setNameTest(toGo);
       getResultTheoryTests(answers).then(data => setResult(data));
     }
 
@@ -45,10 +48,10 @@ const Results = () => {
     <div className="resultsContainer">
       <div className="resultsWrapTitle">
         <h1 className="resultsTitle">Results</h1>
-        <p className="resultsTestName">{`[name of test_]`}</p>
+        <p className="resultsTestName">{`[${nameTest}_]`}</p>
       </div>
 
-      {result > 0 && (
+      {result !== null && (
         <>
           <Chart
             width={'100%'}
@@ -65,7 +68,6 @@ const Results = () => {
               ['Incorrect', 12 - result],
             ]}
             options={{
-              title: 'My Result Test',
               is3D: true,
             }}
             rootProps={{ 'data-testid': '2' }}
@@ -79,9 +81,13 @@ const Results = () => {
             <IconCat />
           </div>
 
-          <p className="resultsText">Not bad!</p>
+          <p className="resultsText">
+            {result === 12 ? 'Awesome!' : 'Not bad!'}
+          </p>
           <p className="resultsLastText">
-            But you still need to learn some materials.
+            {result === 12
+              ? 'Best result! Congratulation!!!'
+              : 'But you still need to learn some materials.'}
           </p>
         </>
       )}
