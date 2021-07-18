@@ -38,7 +38,7 @@ const Contact = () => {
               tempore rem voluptatum.
             </p>
           </li>
-          <li className="contact-item">
+          {/* <li className="contact-item">
             <div className="thumb">
               <img className="contact-img" src="#" alt=""></img>
             </div>
@@ -49,7 +49,7 @@ const Contact = () => {
               error tenetur ad totam dolore ut recusandae itaque harum, corrupti
               expedita veritatis impedit quia eum, in nemo iste veniam enim!
             </p>
-          </li>
+          </li> */}
           <li className="contact-item">
             <div className="thumb">
               <img
@@ -80,7 +80,7 @@ const Contact = () => {
               qui. Possimus.
             </p>
           </li>
-          <li className="contact-item">
+          {/* <li className="contact-item">
             <div className="thumb">
               <img className="contact-img" src="#" alt=""></img>
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
               illo magni totam saepe, eius maxime repellat iusto distinctio eum
               facere eligendi facilis.
             </p>
-          </li>
+          </li> */}
         </ul>
       </div>
     </section>
