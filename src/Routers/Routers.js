@@ -17,9 +17,7 @@ const Contacts = lazy(
 );
 const UsefulResources = lazy(
   () =>
-    import(
-      '../pages/UsefulResourcesPage'
-    ) /* webpackChunkName: "UsefulResourcesPage" */,
+    import('../pages/UsefulResourcesPage') /* webpackChunkName: "UsefulResourcesPage" */,
 );
 
 const ResultsPage = lazy(
@@ -39,9 +37,9 @@ const Pages = () => {
       <Switch>
         {!isAuthenticated && (
           <>
-            <PublicRoute path="/login" exact component={HomePage} />
-            <PublicRoute path="/" redirectTo="/login" exact component={HomePage} />
-            <PublicRoute path="/register" component={Register} redirectTo="/" />
+            <PublicRoute path="/login" component={HomePage} restricted />
+            <PublicRoute path="/" redirectTo="/login" component={HomePage} restricted />
+            <PublicRoute path="/register" component={Register} restricted redirectTo="/login" />
           </>
         )}
         <PublicRoute path="/contacts" component={Contacts} redirectTo="/" />
@@ -56,6 +54,7 @@ const Pages = () => {
         />
         <PrivateRoute
           path="/UsefulResources"
+          exact
           component={UsefulResources}
           restricted
           redirectTo="/"

@@ -1,6 +1,8 @@
 .container {
     width: 100%;
-    min-height: calc(100vh - 164px);
+    @media screen and (min-width: 1280px) {
+        min-height: calc(100vh - 164px);
+    }
 }
 ul,
 h1 {

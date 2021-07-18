@@ -11,7 +11,7 @@ export default function Auth() {
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+
 
     useEffect(() => {
         dispatch(resetResult());
@@ -36,25 +36,10 @@ export default function Auth() {
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(authOperation.logIn({ email, password }));
+        setEmail('');
+        setPassword('');
     };
 
-    const handleClickQa = () => {
-        history.push({
-            pathname: '/tests',
-            state: {
-                toGo: 'QA technical training',
-            },
-        });
-    };
-
-    const hadleClickTheory = () => {
-        history.push({
-            pathname: '/tests',
-            state: {
-                toGo: 'Testing theory',
-            },
-        });
-    };
     const onClickGoogle = () => {
         dispatch(authOperation.registerGoogle());
     }
@@ -97,7 +82,9 @@ export default function Auth() {
                         />
                     </label>
                     <div className="login-bth-block">
-                        <button className="activeLinkBth" type="submit">SING IN</button>
+                        <button className="activeLinkBth" type="submit">
+                            SING IN
+                        </button>
                         <NavLink
                             className='login-bth'
                             to="/register"
@@ -107,18 +94,7 @@ export default function Auth() {
                     </div>
                 </form>
             </div>
-            <ul>
-                <li>
-                    <button type="button" onClick={handleClickQa}>
-                        QA technical training
-                    </button>
-                </li>
-                <li>
-                    <button type="button" onClick={hadleClickTheory}>
-                        Testing theory
-                    </button>
-                </li>
-            </ul>
+
         </div>
     );
 }
