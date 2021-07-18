@@ -4,6 +4,7 @@ import './Contact.scss';
 import balashov from '../../img/balashov.jpg';
 import dera from '../../img/dera.JPG';
 import novalenko from '../../img/novalenko.jpg';
+import sinenco from '../../img/sinenko.jpg';
 
 const Contact = () => {
   return (
@@ -68,7 +69,7 @@ const Contact = () => {
           </li>
           <li className="contact-item">
             <div className="thumb">
-              <img className="contact-img" src="#" alt=""></img>
+              <img className="contact-img" src={sinenco} alt="sinenco"></img>
             </div>
             <h3 className="contact-item-title">Roman Sinenko</h3>
             <h4 className="contact-item-job">Front-End Developer</h4>
