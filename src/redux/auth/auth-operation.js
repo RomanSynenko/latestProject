@@ -42,12 +42,23 @@ const register = credentials => async dispatch => {
   }
 };
 
+const registerGoogle = () => async dispatch => {
+  dispatch(registerRequest());
+  try {
+    const respons = await axios.get('/api/users/google');
+    token.set(respons.data.data.token);
+  } catch (error) {
+    Pnotify.error();
+    dispatch(registerError(error.message));
+  }
+};
+
 const logIn = credentials => async dispatch => {
   dispatch(loginRequest());
   try {
-    const respons = await axios.post('/api/users/login', credentials);
-    token.set(respons.data.token);
-    dispatch(loginSuccess(respons.data));
+    const respons = await axios.post('/api/users/signin', credentials);
+    token.set(respons.data.data.token);
+    dispatch(loginSuccess(respons.data.data));
     Pnotify.goodRequest();
   } catch (error) {
     Pnotify.error();
@@ -80,12 +91,12 @@ const getCurrentUser = () => async (dispatch, getState) => {
   dispatch(getCurrentUserRequest());
 
   try {
-    const response = await axios.get('/users/current');
-    dispatch(getCurrentUserSuccess(response.data));
+    const response = await axios.get('api/users/current');
+    dispatch(getCurrentUserSuccess(response.data.data));
   } catch (error) {
     Pnotify.error();
     dispatch(getCurrentUserError(error.message));
   }
 };
 
-export default { register, logIn, logOut, getCurrentUser };
+export default { register, logIn, logOut, getCurrentUser, registerGoogle };

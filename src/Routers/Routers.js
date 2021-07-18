@@ -29,17 +29,24 @@ const ResultsPage = lazy(
 const TestsPage = lazy(
   () => import('../pages/TestsPage.js') /* webpackChunkName: "TestsPage" */,
 );
-
+const Register = lazy(
+  () => import('../pages/RegisterPage.js') /* webpackChunkName: "Register" */,
+);
 const Pages = () => {
   const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
   return (
     <Suspense fallback={<Loader />}>
       <Switch>
         {!isAuthenticated && (
-          <PublicRoute path="/" exact component={HomePage} />
+          <>
+            <PublicRoute path="/login" exact component={HomePage} />
+            <PublicRoute path="/" redirectTo="/login" exact component={HomePage} />
+            <PublicRoute path="/register" component={Register} redirectTo="/" />
+          </>
         )}
         <PublicRoute path="/contacts" component={Contacts} redirectTo="/" />
         <PublicRoute path="/tests" component={TestsPage} redirectTo="/" />
+
         <PrivateRoute
           path="/"
           exact

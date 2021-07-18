@@ -13,8 +13,7 @@ const Navigation = () => {
             {!isAuthenticated && (
                 <NavLink
                     className="link logo"
-                    activeClassName="activeLink"
-                    to="/"
+                    to="/login"
                     exact
                 >
                     <img
@@ -26,7 +25,6 @@ const Navigation = () => {
             )}
             {isAuthenticated && (<NavLink
                 className='link logo'
-                activeClassName='activeLink'
                 to="/"
                 exact
             >

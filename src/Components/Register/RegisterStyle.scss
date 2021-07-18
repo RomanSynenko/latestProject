@@ -1,0 +1,199 @@
+.auth-components {
+    padding: 0 20px;
+    box-sizing: border-box;
+    @media screen and (min-width: 768px) {
+        padding: 0 115px;
+    }
+    @media screen and (min-width: 1280px) {
+        padding: 0 125px;
+        display: flex;
+        align-items: center;
+    }
+
+    .login-info {
+        font-style: normal;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        p::before {
+            content: "[ ";
+            font-weight: bold;
+        }
+        p::after {
+            content: " ]";
+            font-weight: bold;
+        }
+        .title-login {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+            @media screen and (min-width: 768px) {
+                font-size: 30px;
+                line-height: 37px;
+                margin-bottom: 20px;
+            }
+            @media screen and (min-width: 1280px) {
+                font-size: 34px;
+                line-height: 41px;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            width: 540px;
+            margin: 0 auto;
+            > p {
+                font-size: 16px;
+                line-height: 36px;
+            }
+        }
+        @media screen and (min-width: 1280px) {
+            width: 420px;
+            > p {
+                font-size: 18px;
+            }
+        }
+    }
+    .engineer {
+        font-weight: bold;
+    }
+    .login_form {
+        width: 100%;
+        padding: 30px 20px;
+        background: #fff;
+        margin: 30px auto;
+        box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+        @media screen and (min-width: 768px) {
+            width: 540px;
+            padding: 62px 58px 42px;
+        }
+        @media screen and (min-width: 1280px) {
+            width: 505px;
+            padding: 62px 42px 40px;
+        }
+        .login_form-choice {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            margin-bottom: 26px;
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        .google-register {
+            cursor: pointer;
+            display: block;
+            width: 160px;
+            height: 50px;
+            border: none;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+            &:hover {
+                background: #ff6b09;
+                color: #fff;
+            }
+            &:active {
+                background: #ff6b09;
+                color: #fff;
+            }
+            .google-register_text {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.02em;
+                margin-left: 12px;
+            }
+            @media screen and (max-width: 767px) {
+                margin: 0 auto;
+            }
+        }
+        .login_form-input-text {
+            margin-top: 30px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 0.02em;
+            @media screen and (min-width: 768px) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        .login_input {
+            width: 100%;
+            margin: 20px 0px 0px 0px;
+            padding: 20px 20px 20px 20px;
+            border: 1px solid #ced2d1;
+            background: #fff;
+            box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+            &:last-child {
+                margin: 24px 0 0 0;
+            }
+            @media screen and (min-width: 768px) {
+                margin: 30px 0 0 0;
+                width: 425px;
+            }
+        }
+        .login-bth-block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .login-bth {
+                cursor: pointer;
+                width: 45%;
+                margin-top: 20px;
+                height: 60px;
+                border: 1px solid #ced2d1;
+                font-size: 20px;
+                display: flex;
+                background: #fff;
+                box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 10px;
+                line-height: 12px;
+                &:hover {
+                    background: #ff6b09;
+                    color: #fff;
+                }
+                &:active {
+                    background: #ff6b09;
+                    color: #fff;
+                }
+            }
+            .activeLinkBth {
+                cursor: pointer;
+                width: 45%;
+                margin-top: 20px;
+                height: 60px;
+                border: 1px solid #ced2d1;
+                font-size: 20px;
+                display: flex;
+                background: #ff6b09;
+                box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 10px;
+                line-height: 12px;
+                color: #fff;
+            }
+            @media screen and (min-width: 768px) {
+                margin: 40px 0 0 0;
+            }
+        }
+    }
+}

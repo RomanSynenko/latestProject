@@ -1,53 +1,10 @@
 .container {
-    min-height: calc(100vh - 126px);
+    width: 100%;
+    min-height: calc(100vh - 164px);
 }
 ul,
 h1 {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.title-login {
-    text-align: center;
-}
-.login_form {
-    width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.login_form > label {
-    font-size: 20px;
-    width: 80px;
-    margin-top: 10px;
-}
-.login_input {
-    width: 400px;
-    margin: 20px 0 0px 0px;
-    padding: 20px 20px 20px 20px;
-    border: 1px solid #e7e1e0;
-    border-radius: 20px;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    margin-right: 20px;
-}
-.login-bth {
-    margin-top: 40px;
-    height: 60px;
-    border: 1px solid #e7e1e0;
-    font-size: 20px;
-    border-radius: 20px;
-    background: aliceblue;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-}
-.login-bth:hover {
-    background: blueviolet;
-}
-.login_input:last-child {
-    margin-right: 0;
-}
-.home-page-container {
-    width: 435px;
-    margin: auto;
 }

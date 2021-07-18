@@ -7,7 +7,7 @@ import './UserMenuStyle.scss'
 
 const UserMenu = () => {
     const dispatch = useDispatch();
-    const name = useSelector(authSelector.getUserName);
+    const name = useSelector(authSelector.getUserName).slice(0, 7);
     const shortName = name.slice(0, 1)
     const LogOut = useCallback(
         () => {
