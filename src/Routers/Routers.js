@@ -61,7 +61,7 @@ const Pages = () => {
           restricted
           redirectTo="/login"
         />
-        <PublicRoute
+        <PrivateRoute
           path="/results"
           exact
           component={ResultsPage}
