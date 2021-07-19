@@ -17,8 +17,8 @@ const UserMenu = () => {
     );
     return (
         <div className="logout-container">
-            {/* <span className='short-name'>{shortName}</span>
-            <span className='welcone-text'>{name}</span> */}
+            <span className='short-name'>{shortName}</span>
+            <span className='welcone-text'>{name}</span>
             <button className="logout-button" type="button" onClick={LogOut}>
                 <SignOut />
             </button>

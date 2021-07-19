@@ -57,7 +57,7 @@ const TestsPage = () => {
   };
 
   return (
-    <>
+    <div className='begin-test'>
       {tests.length === 0 && <App />}
       {tests.length > 0 && (
         <>
@@ -124,7 +124,7 @@ const TestsPage = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 

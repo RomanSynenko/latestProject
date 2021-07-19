@@ -2,7 +2,7 @@
     padding: 39px 20px 0;
     box-sizing: border-box;
     @media screen and (min-width: 768px) {
-        padding: 80px 115px 0;
+        padding: 80px 115px 50px;
     }
     @media screen and (min-width: 1280px) {
         padding: 100px 125px;
@@ -95,14 +95,14 @@
             align-items: center;
             margin-top: 30px;
             box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
-            // &:hover {
-            //     background: #ff6b09;
-            //     color: #fff;
-            // }
-            // &:active {
-            //     background: #ff6b09;
-            //     color: #fff;
-            // }
+            &:hover {
+                background: #ff6b09;
+                color: #fff;
+            }
+            &:active {
+                background: #ff6b09;
+                color: #fff;
+            }
             .google-register_text {
                 font-style: normal;
                 font-weight: bold;

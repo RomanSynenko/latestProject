@@ -1,12 +1,12 @@
 .container {
     width: 100%;
     @media screen and (min-width: 1280px) {
-        min-height: calc(100vh - 126px);
+        height: calc(100% - 126px);
     }
 }
 ul,
 h1 {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

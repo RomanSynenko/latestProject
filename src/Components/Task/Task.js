@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { ReactComponent as Vector } from '../../img/Vector.svg';
 import './TaskStyle.scss';
 
 const Task = () => {
@@ -24,23 +25,25 @@ const Task = () => {
     };
     return (
         <div className='home-page-container'>
-            <div>
+            <div className='home-page_text-container'>
                 <p className='home-page-container_text'>“Regression testing. What is it? If the system compiles, that's good, if it boots, that's great!”</p>
                 <p className='home-page-container_text_autor'>Linus Torvalds</p>
                 <p className='home-page-container_text_creator'>Linux kernel creator, hacker, 1969</p>
             </div>
-            <ul>
-                <li>
-                    <button type="button" onClick={handleClickQa}>
+            <div className='test-container'>
+                <button className='test-container-bth' type="button" onClick={handleClickQa}>
+                    <p>
                         QA technical training
-                    </button>
-                </li>
-                <li>
-                    <button type="button" onClick={hadleClickTheory}>
+                        <Vector />
+                    </p>
+                </button>
+                <button className='test-container-bth color-orange' type="button" onClick={hadleClickTheory}>
+                    <p>
                         Testing theory
-                    </button>
-                </li>
-            </ul>
+                        <Vector />
+                    </p>
+                </button>
+            </div>
         </div>
     );
 };

@@ -7,7 +7,8 @@ html {
 *::before {
   box-sizing: inherit;
 }
-p {
+p,
+button {
   margin: 0;
 }
 a {
@@ -19,4 +20,16 @@ body {
   background: #f5f6fb;
   font-size: 14px;
   width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+#root {
+  @media screen and (min-width: 1280px) {
+    height: 100vh;
+  }
+}
+.begin-test {
+  @media screen and (min-width: 1280px) {
+    padding-top: 40px;
+  }
 }
