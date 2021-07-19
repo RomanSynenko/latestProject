@@ -1,13 +1,10 @@
 import React from 'react';
+import Contact from '../Components/contact';
 
 const HomePage = () => {
   return (
     <>
-      <div className='home-page-container'>
-        <h1>
-          contact
-        </h1>
-      </div>
+      <Contact />
     </>
   );
 };
