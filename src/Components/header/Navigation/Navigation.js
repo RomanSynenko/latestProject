@@ -37,7 +37,7 @@ const Navigation = () => {
                     Home
                 </NavLink>
                 )}
-                {isAuthenticated && (<NavLink
+                {/* {isAuthenticated && (<NavLink
                     className='link'
                     activeClassName='activeLink'
                     to="/UsefulResources"
@@ -54,7 +54,7 @@ const Navigation = () => {
                 >
                     Contacts
                 </NavLink>
-                )}
+                )} */}
             </nav>
         </>
     )

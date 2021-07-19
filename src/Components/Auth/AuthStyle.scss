@@ -1,11 +1,11 @@
 .auth-components {
-    padding: 0 20px;
+    padding: 39px 20px 0;
     box-sizing: border-box;
     @media screen and (min-width: 768px) {
-        padding: 0 115px;
+        padding: 80px 115px 0;
     }
     @media screen and (min-width: 1280px) {
-        padding: 0 125px;
+        padding: 100px 125px;
         display: flex;
         align-items: center;
     }
