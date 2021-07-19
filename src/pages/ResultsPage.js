@@ -3,7 +3,7 @@ import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Chart } from 'react-google-charts';
 import { ReactComponent as IconCat } from '../img/cat.svg';
-import App from '../Components/Loader';
+import LoaderClass from '../Components/Loader';
 import {
   getResultPracticeTests,
   getResultTheoryTests,
@@ -59,7 +59,7 @@ const Results = () => {
             chartType="PieChart"
             loader={
               <div>
-                <App />
+                <LoaderClass />
               </div>
             }
             data={[

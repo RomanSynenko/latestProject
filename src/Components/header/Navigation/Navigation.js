@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { authSelector } from '../../../redux/auth';
 
 import './NavigationStyle.scss';
-import src from '../../../img/logo.png';
+import { ReactComponent as Logo } from '../../../img/logo.svg';
 
 const Navigation = () => {
     const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
@@ -13,28 +13,18 @@ const Navigation = () => {
             {!isAuthenticated && (
                 <NavLink
                     className="link logo"
-                    activeClassName="activeLink"
-                    to="/"
+                    to="/login"
                     exact
                 >
-                    <img
-                        src={src}
-                        alt="logo"
-
-                    />
+                    <Logo />
                 </NavLink>
             )}
             {isAuthenticated && (<NavLink
                 className='link logo'
-                activeClassName='activeLink'
                 to="/"
                 exact
             >
-                <img
-                    src={src}
-                    alt="logo"
-
-                />
+                <Logo />
             </NavLink>
             )}
             <nav>
@@ -44,16 +34,16 @@ const Navigation = () => {
                     to="/"
                     exact
                 >
-                    Главная
+                    Home
                 </NavLink>
                 )}
-                {isAuthenticated && (<NavLink
+                {/* {isAuthenticated && (<NavLink
                     className='link'
                     activeClassName='activeLink'
                     to="/UsefulResources"
                     exact
                 >
-                    Полезные ресурсы
+                    Materials
                 </NavLink>
                 )}
                 {isAuthenticated && (<NavLink
@@ -62,9 +52,9 @@ const Navigation = () => {
                     to="/contacts"
                     exact
                 >
-                    Контакты
+                    Contacts
                 </NavLink>
-                )}
+                )} */}
             </nav>
         </>
     )

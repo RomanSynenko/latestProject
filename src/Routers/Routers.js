@@ -17,9 +17,7 @@ const Contacts = lazy(
 );
 const UsefulResources = lazy(
   () =>
-    import(
-      '../pages/UsefulResourcesPage'
-    ) /* webpackChunkName: "UsefulResourcesPage" */,
+    import('../pages/UsefulResourcesPage') /* webpackChunkName: "UsefulResourcesPage" */,
 );
 
 const ResultsPage = lazy(
@@ -29,29 +27,41 @@ const ResultsPage = lazy(
 const TestsPage = lazy(
   () => import('../pages/TestsPage.js') /* webpackChunkName: "TestsPage" */,
 );
-
+const Register = lazy(
+  () => import('../pages/RegisterPage.js') /* webpackChunkName: "Register" */,
+);
 const Pages = () => {
   const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
   return (
     <Suspense fallback={<Loader />}>
       <Switch>
         {!isAuthenticated && (
-          <PublicRoute path="/" exact component={HomePage} />
+          <>
+            <PublicRoute path="/" component={HomePage} restricted exact />
+            <PublicRoute path="/UsefulResources" component={HomePage} restricted />
+            <PublicRoute path="/login" component={HomePage} restricted exact />
+            <PublicRoute path="/contacts" component={Contacts} />
+          </>
         )}
-        <PublicRoute path="/contacts" component={Contacts} redirectTo="/" />
-        <PublicRoute path="/tests" component={TestsPage} redirectTo="/" />
+        <PublicRoute path="/contacts" component={Contacts} />
+        <PrivateRoute path="/tests" component={TestsPage} redirectTo="/" />
+        <PrivateRoute
+          path="/login"
+          component={MainPage}
+          redirectTo="/"
+        />
         <PrivateRoute
           path="/"
           exact
           component={MainPage}
-          restricted
           redirectTo="/"
         />
         <PrivateRoute
           path="/UsefulResources"
+          exact
           component={UsefulResources}
           restricted
-          redirectTo="/"
+          redirectTo="/login"
         />
         <PublicRoute
           path="/results"
@@ -60,6 +70,7 @@ const Pages = () => {
           restricted
           redirectTo="/"
         />
+
       </Switch>
     </Suspense>
   );

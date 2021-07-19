@@ -4,7 +4,7 @@ import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import s from './Loader.module.scss';
 
-export default class App extends Component {
+export default class LoaderClass extends Component {
   render() {
     return (
       <Loader

@@ -1,0 +1,42 @@
+.home-page-container {
+    padding: 30px 20px;
+    box-sizing: border-box;
+    > div {
+        .home-page-container_text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            &::after {
+                display: block;
+                content: "";
+                width: 130px;
+                height: 1px;
+                background: rgba(0, 18, 47, 1);
+                margin: 40px auto 0;
+                opacity: 0.15;
+            }
+        }
+        .home-page-container_text_autor {
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+        .home-page-container_text_creator {
+            margin-top: 4px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #555555;
+        }
+    }
+}

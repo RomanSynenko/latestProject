@@ -1,5 +1,5 @@
 import React from 'react';
-import FullInfo from '../Components/fullInfo';
+import FullInfo from '../Components/FullInfo';
 
 const UsefulResourcesPage = () => {
   return (

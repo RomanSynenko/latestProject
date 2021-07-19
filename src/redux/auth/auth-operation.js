@@ -2,6 +2,8 @@ import axios from 'axios';
 import authAction from './auth-action';
 
 import Pnotify from '../../Components/Pnotify/Pnotify';
+import { useSelector } from 'react-redux';
+import authSelector from './auth-selector';
 
 const {
   registerRequest,
@@ -35,7 +37,18 @@ const register = credentials => async dispatch => {
     const respons = await axios.post('/api/users/signup', credentials);
     token.set(respons.data.token);
     Pnotify.goodRequest();
-    dispatch(registerSuccess(respons.data));
+    dispatch();
+  } catch (error) {
+    // Pnotify.error();
+    // dispatch(registerError(error.message));
+  }
+};
+
+const registerGoogle = () => async dispatch => {
+  dispatch(registerRequest());
+  try {
+    const respons = await axios.get('/api/users/google');
+    token.set(respons.data.data.token);
   } catch (error) {
     Pnotify.error();
     dispatch(registerError(error.message));
@@ -45,9 +58,9 @@ const register = credentials => async dispatch => {
 const logIn = credentials => async dispatch => {
   dispatch(loginRequest());
   try {
-    const respons = await axios.post('/api/users/login', credentials);
-    token.set(respons.data.token);
-    dispatch(loginSuccess(respons.data));
+    const respons = await axios.post('/api/users/signin', credentials);
+    token.set(respons.data.data.token);
+    dispatch(loginSuccess(respons.data.data));
     Pnotify.goodRequest();
   } catch (error) {
     Pnotify.error();
@@ -68,24 +81,23 @@ const logOut = () => async dispatch => {
 };
 
 const getCurrentUser = () => async (dispatch, getState) => {
-  const {
-    auth: { token: persistedToken },
-  } = getState();
 
+  const {
+    auth: { token: persistedToken }
+  } = getState();
   if (!persistedToken) {
     return;
   }
-
   token.set(persistedToken);
   dispatch(getCurrentUserRequest());
-
   try {
-    const response = await axios.get('/users/current');
-    dispatch(getCurrentUserSuccess(response.data));
+    const response = await axios.post('/api/users/current');
+    dispatch(getCurrentUserSuccess(response.data.data.user));
   } catch (error) {
     Pnotify.error();
     dispatch(getCurrentUserError(error.message));
   }
+
 };
 
-export default { register, logIn, logOut, getCurrentUser };
+export default { register, logIn, logOut, getCurrentUser, registerGoogle };

@@ -1,14 +1,9 @@
 import React from 'react';
+import Task from '../Components/Task';
 
 const MainPage = () => {
     return (
-        <>
-            <div className='home-page-container'>
-                <h1>
-                    MainPage
-                </h1>
-            </div>
-        </>
+        <Task />
     );
 };
 
