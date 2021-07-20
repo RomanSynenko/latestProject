@@ -41,8 +41,7 @@ const Pages = () => {
             <PublicRoute path="/contacts" component={Contacts} />
           </>
         )}
-
-        <PublicRoute path="/contacts" component={Contacts} redirectTo="/" />
+        <PublicRoute path="/contacts" component={Contacts} />
         <PrivateRoute path="/tests" component={TestsPage} redirectTo="/" />
         <PrivateRoute
           path="/login"

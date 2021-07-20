@@ -5,8 +5,6 @@ import { getPracticeTests, getTheoryTests } from '../services/tests/getTests';
 import styles from './styles/TestsPage.module.css';
 import { resultTest } from '../redux/tests/testsSlice';
 import App from '../Components/Loader';
-import { ReactComponent as Next } from '../img/next.svg';
-import { ReactComponent as Prev } from '../img/prev.svg';
 
 const TestsPage = () => {
   const [tests, setTests] = useState([]);
@@ -15,8 +13,6 @@ const TestsPage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const toGo = useLocation().state?.toGo;
-
-  
 
   useEffect(() => {
     if (toGo === 'QA technical training') {
@@ -32,22 +28,19 @@ const TestsPage = () => {
     }
   }, [toGo, dispatch]);
 
-
   const handleChange = e => {
     const { name: id, value: answer } = e.currentTarget;
 
     const result = {
       id,
       answer,
-    }; 
-    dispatch(resultTest(result))
+    };
 
+    dispatch(resultTest(result));
   };
-  
 
   const getNext = () => {
     setCount(count + 1);
-    
   };
 
   const getPrevious = () => {
@@ -55,7 +48,6 @@ const TestsPage = () => {
   };
 
   const sendingResult = () => {
-    console.log("llllll");
     history.push({
       pathname: '/results',
       state: {
@@ -70,7 +62,7 @@ const TestsPage = () => {
       {tests.length > 0 && (
         <>
           <div className={styles.wrap}>
-            <h3 className={styles.subtitle}>{`[${toGo}_]`}</h3>
+            <h3>[ Testing practice_ ]</h3>
             <button
               className={styles.btnFinish}
               type="button"
@@ -89,7 +81,7 @@ const TestsPage = () => {
                   <div key={_id}>
                     <div className={styles.modal}>
                       <p className={styles.number}>
-                        Question <span className={styles.count}>{count}</span>/{tests.length}
+                        Question {count}/{tests.length}
                       </p>
                       <h3 className={styles.question}>{question}</h3>
                       <ul>
@@ -101,10 +93,8 @@ const TestsPage = () => {
                               type="radio"
                               name={_id}
                               value={answer}
-                              id={answer} 
-                              checked={resultAnswers.find(el=>el.answer===answer&&el.id===_id)?true:false}                           
                             />
-                            <label className={styles.text} htmlFor={answer}>{answer}</label>
+                            <span>{answer}</span>
                           </li>
                         ))}
                       </ul>
@@ -116,23 +106,20 @@ const TestsPage = () => {
           </div>
           <div className={styles.wrap}>
             <button
-              className={styles.btn}
+              className={styles.btnPrevious}
               type="button"
               onClick={getPrevious}
               disabled={count < 2}
             >
-              <Prev/>
-              <span className={styles.textBtn}>Previous question </span>              
+              Previous question
             </button>
             <button
-              className={styles.btn}
+              className={styles.btnNext}
               type="button"
               onClick={getNext}
               disabled={count > 11}
             >
-              
-              <span className={styles.textBtn}>Next question </span> 
-              <Next/>
+              Next question
             </button>
           </div>
         </>
