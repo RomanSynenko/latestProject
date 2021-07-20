@@ -6,6 +6,12 @@
   max-width: 800px;
 }
 
+@media screen and (max-width: 1280px) {
+  .beginTest {
+    padding-top: 100px;
+    margin-bottom: 40px;
+  }
+}
 .wrap:not(:last-child) {
   margin-bottom: 27px;
 }
@@ -32,7 +38,7 @@
 
   color: #000000;
   cursor: pointer;
-  transition: 300ms;  
+  transition: 300ms;
 }
 
 .btnFinish:disabled {
@@ -51,7 +57,7 @@
 .btnFinish:focus {
   background: #ff6b09;
   color: #fff;
-  transition: 300ms;  
+  transition: 300ms;
 }
 
 .modal {
@@ -109,7 +115,7 @@ input {
 }
 
 .input::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -122,7 +128,7 @@ input {
 }
 
 .input:checked::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -147,19 +153,19 @@ input {
   color: #000000;
   background: #fff;
   cursor: pointer;
-  border: 1px solid #ff6b09 ;
+  border: 1px solid #ff6b09;
   fill: #000000;
   transition: 300ms;
 }
 
-.btn:disabled{
+.btn:disabled {
   cursor: auto;
 }
 
-.btn:disabled:hover{
+.btn:disabled:hover {
   color: #000000;
   background: #fff;
-  border: 1px solid #ff6b09 ;
+  border: 1px solid #ff6b09;
   fill: #000000;
 }
 
@@ -167,13 +173,12 @@ input {
   color: #fff;
   background: #ff6b09;
   fill: #fff;
-  transition: 300ms;  
+  transition: 300ms;
 }
 
-.textBtn{
+.textBtn {
   display: inline;
 }
-
 
 @media screen and (max-width: 1279px) {
   .wrap {
@@ -227,7 +232,7 @@ input {
     margin-bottom: 13px;
   }
 
-  .btn{
+  .btn {
     min-width: 55px;
   }
 

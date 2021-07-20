@@ -16,7 +16,7 @@ const TestsPage = () => {
   const history = useHistory();
   const toGo = useLocation().state?.toGo;
 
-  
+
 
   useEffect(() => {
     if (toGo === 'QA technical training') {
@@ -39,15 +39,15 @@ const TestsPage = () => {
     const result = {
       id,
       answer,
-    }; 
+    };
     dispatch(resultTest(result))
 
   };
-  
+
 
   const getNext = () => {
     setCount(count + 1);
-    
+
   };
 
   const getPrevious = () => {
@@ -55,7 +55,6 @@ const TestsPage = () => {
   };
 
   const sendingResult = () => {
-    console.log("llllll");
     history.push({
       pathname: '/results',
       state: {
@@ -65,7 +64,7 @@ const TestsPage = () => {
   };
 
   return (
-    <div className='begin-test'>
+    <div className={styles.beginTest}>
       {tests.length === 0 && <App />}
       {tests.length > 0 && (
         <>
@@ -101,8 +100,8 @@ const TestsPage = () => {
                               type="radio"
                               name={_id}
                               value={answer}
-                              id={answer} 
-                              checked={resultAnswers.find(el=>el.answer===answer&&el.id===_id)?true:false}                           
+                              id={answer}
+                              checked={resultAnswers.find(el => el.answer === answer && el.id === _id) ? true : false}
                             />
                             <label className={styles.text} htmlFor={answer}>{answer}</label>
                           </li>
@@ -121,8 +120,8 @@ const TestsPage = () => {
               onClick={getPrevious}
               disabled={count < 2}
             >
-              <Prev/>
-              <span className={styles.textBtn}>Previous question </span>              
+              <Prev />
+              <span className={styles.textBtn}>Previous question </span>
             </button>
             <button
               className={styles.btn}
@@ -130,9 +129,9 @@ const TestsPage = () => {
               onClick={getNext}
               disabled={count > 11}
             >
-              
-              <span className={styles.textBtn}>Next question </span> 
-              <Next/>
+
+              <span className={styles.textBtn}>Next question </span>
+              <Next />
             </button>
           </div>
         </>

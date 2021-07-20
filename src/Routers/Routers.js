@@ -39,11 +39,12 @@ const Pages = () => {
             <PublicRoute path="/UsefulResources" component={HomePage} restricted />
             <PublicRoute path="/login" component={HomePage} restricted exact />
             <PublicRoute path="/contacts" component={Contacts} />
+            <PrivateRoute path="/tests" component={HomePage} redirectTo="/login" />
           </>
         )}
 
         <PublicRoute path="/contacts" component={Contacts} redirectTo="/" />
-        <PrivateRoute path="/tests" component={TestsPage} redirectTo="/" />
+        <PrivateRoute path="/tests" component={TestsPage} redirectTo="/login" />
         <PrivateRoute
           path="/login"
           component={MainPage}
@@ -66,8 +67,7 @@ const Pages = () => {
           path="/results"
           exact
           component={ResultsPage}
-          restricted
-          redirectTo="/"
+          redirectTo="/login"
         />
 
       </Switch>
