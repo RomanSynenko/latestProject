@@ -33,13 +33,18 @@ export default function Auth() {
         }
     };
 
-    const handleSubmit = e => {
+    const handleSubmitLogin = e => {
         e.preventDefault();
         dispatch(authOperation.logIn({ email, password }));
         setEmail('');
         setPassword('');
     };
-
+    const handleSubmitRegister = e => {
+        e.preventDefault();
+        dispatch(authOperation.register({ email, password }));
+        setEmail('');
+        setPassword('');
+    };
     const onClickGoogle = () => {
         dispatch(authOperation.registerGoogle());
     }
@@ -59,7 +64,7 @@ export default function Auth() {
                     <Google />
                     <span className='google-register_text'>Google</span>
                 </button>
-                <form onSubmit={handleSubmit} autoComplete="off">
+                <form autoComplete="off">
                     <p className="login_form-input-text">Or login to our app using e-mail and password:</p>
                     <label>
                         <input
@@ -82,15 +87,12 @@ export default function Auth() {
                         />
                     </label>
                     <div className="login-bth-block">
-                        <button className="activeLinkBth" type="submit">
-                            SING IN
+                        <button onClick={handleSubmitLogin} className="login-bth" type="submit">
+                            SIGN IN
                         </button>
-                        <NavLink
-                            className='login-bth'
-                            to="/register"
-                        >
-                            SING UP
-                        </NavLink>
+                        <button onClick={handleSubmitRegister} className="login-bth" type="submit">
+                            SIGN UP
+                        </button>
                     </div>
                 </form>
             </div>

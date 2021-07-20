@@ -35,19 +35,24 @@ const Pages = () => {
       <Switch>
         {!isAuthenticated && (
           <>
-            <PublicRoute path="/login" component={HomePage} restricted />
-            <PublicRoute path="/" redirectTo="/login" component={HomePage} restricted />
-            <PublicRoute path="/register" component={Register} restricted redirectTo="/login" />
+            <PublicRoute path="/" component={HomePage} restricted exact />
+            <PublicRoute path="/UsefulResources" component={HomePage} restricted />
+            <PublicRoute path="/login" component={HomePage} restricted exact />
+            <PublicRoute path="/contacts" component={Contacts} />
           </>
         )}
+
         <PublicRoute path="/contacts" component={Contacts} redirectTo="/" />
         <PrivateRoute path="/tests" component={TestsPage} redirectTo="/" />
-
+        <PrivateRoute
+          path="/login"
+          component={MainPage}
+          redirectTo="/"
+        />
         <PrivateRoute
           path="/"
           exact
           component={MainPage}
-          restricted
           redirectTo="/"
         />
         <PrivateRoute
@@ -55,7 +60,7 @@ const Pages = () => {
           exact
           component={UsefulResources}
           restricted
-          redirectTo="/"
+          redirectTo="/login"
         />
         <PrivateRoute
           path="/results"
@@ -64,6 +69,7 @@ const Pages = () => {
           restricted
           redirectTo="/"
         />
+
       </Switch>
     </Suspense>
   );

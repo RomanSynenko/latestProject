@@ -2,15 +2,22 @@
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
-    padding: 12;
     font-weight: 700;
     color: black;
     transition: 1.2s;
-    margin-right: 20px;
     line-height: 28px;
-}
-.link:last-child {
-    margin-right: 0px;
+    margin-right: 90px;
+    &:last-child {
+        margin-right: 0px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-right: 70px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        margin-right: 0px;
+    }
 }
 .activeLink {
     color: #ff6b09;

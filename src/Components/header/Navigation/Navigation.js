@@ -27,7 +27,7 @@ const Navigation = () => {
                 <Logo />
             </NavLink>
             )}
-            <nav>
+            <nav className="navigation-menu">
                 {isAuthenticated && (<NavLink
                     className='link'
                     activeClassName='activeLink'
