@@ -2,7 +2,11 @@
   width: 320px;
   margin: 0 auto;
 }
-
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding-top: 70px;
+  }
+}
 @media screen and (min-width: 768px) {
   .contact-section {
     width: 768px;
