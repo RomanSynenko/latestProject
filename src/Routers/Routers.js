@@ -27,9 +27,7 @@ const ResultsPage = lazy(
 const TestsPage = lazy(
   () => import('../pages/TestsPage.js') /* webpackChunkName: "TestsPage" */,
 );
-const Register = lazy(
-  () => import('../pages/RegisterPage.js') /* webpackChunkName: "Register" */,
-);
+
 const Pages = () => {
   const isAuthenticated = useSelector(authSelector.getIsAuthenticated);
   return (
