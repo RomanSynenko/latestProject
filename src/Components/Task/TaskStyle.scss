@@ -2,9 +2,10 @@
     padding: 110px 20px;
     box-sizing: border-box;
     overflow: hidden;
-    // @media screen and (min-width: 768px) {
-    //     margin-bottom: 82px;
-    // }
+    @media screen and (min-width: 1280px) {
+       padding: 60px;
+
+    }
     .home-page_text-container {
         width: 320px;
         box-sizing: border-box;
