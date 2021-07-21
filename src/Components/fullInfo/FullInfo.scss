@@ -29,6 +29,11 @@
   letter-spacing: 0.02em;
 }
 
+.full-info-item a:hover,
+.full-info-item a:focus {
+  color: green;
+}
+
 @media screen and (min-width: 768px) {
   .full-info-section {
     width: 768px;
