@@ -1,12 +1,123 @@
+.kndver {
+  position: relative;
+}
+
+.full-info-section {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .full-info-container {
-  padding-top: 100px;
+  padding-top: 40px;
   width: 100%;
+  padding-bottom: 111px;
+  padding-left: 20px;
+  padding-right: 5px;
+  background: url(../../img/pic_1_mob.png) no-repeat center;
 }
-.full-info-content {
+
+.full-info-title {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
-.full-info-container-title {
+
+.full-info-item {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
-.full-info-container-list {
+
+.full-info-item a:hover,
+.full-info-item a:focus {
+  color: green;
 }
-.full-info-container-item {
+
+@media screen and (min-width: 768px) {
+  .full-info-section {
+    width: 768px;
+  }
+
+  .full-info-container {
+    padding-top: 119px;
+    width: 100%;
+    padding-bottom: 416px;
+    padding-left: 115px;
+    padding-right: 10px;
+    background: url(../../img/pic_1_tabl.png) no-repeat center;
+  }
+
+  .full-info-title {
+    font-size: 22px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+    margin-bottom: 47px;
+  }
+
+  .first::after {
+    content: '';
+    position: absolute;
+    width: 321.5px;
+    height: 0px;
+    left: 115px;
+    top: 185px;
+    border: 1px solid #00122f;
+    opacity: 0.1;
+  }
+
+  .second::after {
+    content: '';
+    position: absolute;
+    width: 321.5px;
+    height: 0px;
+    left: 115px;
+    top: 370px;
+    border: 1px solid #00122f;
+    opacity: 0.1;
+  }
+
+  .full-info-list {
+    margin-bottom: 47px;
+    margin-left: 59px;
+  }
+
+  .full-info-item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .full-info-section {
+    width: 1280px;
+    margin: 0 auto;
+    background: url(../../img/pic_1_desc.png) no-repeat center;
+  }
+
+  .full-info-container {
+    padding-top: 119px;
+    width: 100%;
+    padding-bottom: 416px;
+    padding-left: 115px;
+    padding-right: 10px;
+    background: none;
+  }
+
+  .first::after {
+    left: 425px;
+    top: 255px;
+  }
+
+  .second::after {
+    left: 425px;
+    top: 440px;
+  }
+
+  .full-info-list {
+    margin-bottom: 47px;
+    margin-left: 59px;
+  }
 }

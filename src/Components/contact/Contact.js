@@ -17,12 +17,9 @@ const Contact = () => {
               <img className="contact-img" src={balashov} alt="balashov"></img>
             </div>
             <h3 className="contact-item-title">Alexandr Balashov</h3>
-            <h4 className="contact-item-job">Front-End Developer</h4>
+            <h4 className="contact-item-job">Fullstack Developer</h4>
             <p className="contact-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-              possimus sapiente maxime eaque ducimus voluptate omnis. Incidunt
-              et beatae aliquid ullam delectus, quo dignissimos. Cumque rerum
-              debitis harum totam beatae?
+              I'm a full stack developer. Using Node.js and React.js
             </p>
           </li>
           <li className="contact-item">
@@ -32,10 +29,7 @@ const Contact = () => {
             <h3 className="contact-item-title">Mukola Dera</h3>
             <h4 className="contact-item-job">Front-End Developer</h4>
             <p className="contact-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              aperiam autem incidunt nulla, eos ipsum reprehenderit id velit
-              illum dicta voluptas ipsa ratione omnis architecto soluta, maiores
-              tempore rem voluptatum.
+              I'm front-end developer with 1 year experience. Using React.js
             </p>
           </li>
           {/* <li className="contact-item">
@@ -59,12 +53,10 @@ const Contact = () => {
               ></img>
             </div>
             <h3 className="contact-item-title">Vlad Novalenko</h3>
-            <h4 className="contact-item-job">Front-End Developer</h4>
+            <h4 className="contact-item-job">Fullstack Developer</h4>
             <p className="contact-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-              quidem accusantium eum impedit doloremque! Suscipit quisquam nemo,
-              dolores eum tempore voluptates doloremque at. Libero, delectus.
-              Ab, placeat! Esse, possimus architecto!
+              I am a full stack developer, writing software for NodeJs and
+              React.
             </p>
           </li>
           <li className="contact-item">
@@ -74,10 +66,8 @@ const Contact = () => {
             <h3 className="contact-item-title">Roman Sinenko</h3>
             <h4 className="contact-item-job">Front-End Developer</h4>
             <p className="contact-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
-              odio numquam voluptate, dicta ipsa delectus blanditiis laudantium
-              velit porro veniam vel expedita dolorem rem. Quod nam eum unde
-              qui. Possimus.
+              I'm front-end developer with over 1 year experience. Have solid
+              understanding of js code profiling and optimizing.
             </p>
           </li>
           {/* <li className="contact-item">
