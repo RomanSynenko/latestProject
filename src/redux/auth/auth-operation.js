@@ -7,7 +7,6 @@ import authSelector from './auth-selector';
 
 const {
   registerRequest,
-  registerSuccess,
   registerError,
   loginRequest,
   loginSuccess,
@@ -20,7 +19,8 @@ const {
   getCurrentUserError,
 } = authAction;
 
-axios.defaults.baseURL = 'http://tests-app-api.herokuapp.com';
+axios.defaults.baseURL = 'https://tests-app-api.herokuapp.com';
+
 
 const token = {
   set(token) {
@@ -39,8 +39,8 @@ const register = credentials => async dispatch => {
     Pnotify.goodRequest();
     dispatch();
   } catch (error) {
-    // Pnotify.error();
-    // dispatch(registerError(error.message));
+    Pnotify.error();
+    dispatch(registerError(error.message));
   }
 };
 
