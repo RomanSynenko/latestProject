@@ -78,6 +78,7 @@
             justify-content: space-between;
         }
         .test-container-bth {
+            cursor: pointer;
             width: 280px;
             height: 212px;
             border: none;
@@ -88,11 +89,14 @@
             letter-spacing: 0.02em;
             color: #ffffff;
             background: #02172a;
-
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            &:hover {
+                transform: scale(1.05);
+                transition: 300ms;
+            }
             @media screen and (min-width: 768px) {
                 margin: 0 auto;
                 width: 400px;
