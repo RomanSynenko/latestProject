@@ -4,9 +4,9 @@ import FullInfo from '../Components/fullInfo';
 const UsefulResourcesPage = () => {
   return (
     <>
-      <div className="home-page-container">
-        <FullInfo />
-      </div>
+      {/* <div className="home-page-container"> */}
+      <FullInfo />
+      {/* </div> */}
     </>
   );
 };
