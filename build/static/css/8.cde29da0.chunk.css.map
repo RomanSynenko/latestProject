@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/Components/FullInfo/FullInfo.scss"],"names":[],"mappings":"AAAA,qBACE,iBAAkB,CAClB,UAAW","file":"8.cde29da0.chunk.css","sourcesContent":[".full-info-container {\n  padding-top: 100px;\n  width: 100%;\n}\n.full-info-content {\n}\n.full-info-container-title {\n}\n.full-info-container-list {\n}\n.full-info-container-item {\n}\n"]}

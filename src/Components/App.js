@@ -5,7 +5,7 @@ import Pages from '../Routers/Routers';
 
 import Container from './Container';
 import Footer from './Footer';
-import Header from './header';
+import Header from './Header';
 import NavState from './BurgerMenu/context/navState';
 import MainMenu from './BurgerMenu/MainMenu';
 const App = () => {

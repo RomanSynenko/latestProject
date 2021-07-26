@@ -3,8 +3,7 @@
     box-sizing: border-box;
     overflow: hidden;
     @media screen and (min-width: 1280px) {
-       padding: 60px;
-
+        padding: 60px;
     }
     .home-page_text-container {
         width: 320px;
@@ -74,7 +73,7 @@
             margin: 40 auto 0;
         }
         @media screen and (min-width: 1280px) {
-            width: 820px;
+            width: 830px;
             display: flex;
             justify-content: space-between;
         }
@@ -94,7 +93,12 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            transition: 300ms;
             &:hover {
+                transform: scale(1.05);
+                transition: 300ms;
+            }
+            &:focus {
                 transform: scale(1.05);
                 transition: 300ms;
             }
