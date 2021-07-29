@@ -59,7 +59,7 @@ export default function Auth() {
                 </p>
             </div>
             <div className="login_form">
-                <p className="login_form-choice">You can use your Google Account to authorize:</p>
+                {/* <p className="login_form-choice">You can use your Google Account to authorize:</p> */}
                 {/* <button onClick={onClickGoogle} className='google-register'>
                     <Google />
                     <span className='google-register_text'>Google</span>
