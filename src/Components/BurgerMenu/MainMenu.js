@@ -12,6 +12,7 @@ import { ReactComponent as Logo } from '../../img/logo.svg';
 
 
 const Navbar = styled.div`
+
   display: flex;
   position: fixed;
   border: 1px solid #e2e3e5;
@@ -27,8 +28,13 @@ const Navbar = styled.div`
   height: 70px;
   flex-direction: row;
   justify-content: space-between;
-  padding: 6px 0px 0px 0px;
+  padding: 0px;
   z-index: 500;
+  background: #f5f6fb;
+  box-sizing: border-box;
+  border-right: 0;
+  border-top:0;
+  border-left: 0;
   @media screen and (min-width: 767px) {
     display: none;
   }

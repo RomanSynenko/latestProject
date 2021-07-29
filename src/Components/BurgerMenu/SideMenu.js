@@ -9,8 +9,8 @@ const Menu = styled.nav`
 @media screen and (min-width: 768px) {
   display: none;
 }
-
-  position: absolute;
+overflow: hidden;
+  position: fixed;
   top: 0px;
   left: 0px;
   bottom: 0px;
@@ -23,7 +23,7 @@ const Menu = styled.nav`
   padding-right: 0px;
   align-items: stretch;
   background-color: #F5F6FB;
-  transform: translateY(-100%);
+  transform: translateX(-100%);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   ${(props) =>
@@ -49,6 +49,7 @@ line-height: 16px;
   background-repeat: no-repeat;
   transition: background-position 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   text-decoration: none;
+  background: #f5f6fb;
   :hover {
     color:#ff6b09;
     background-position: 90% 50%;

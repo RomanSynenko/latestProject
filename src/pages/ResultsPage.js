@@ -55,7 +55,7 @@ const Results = () => {
         <>
           <Chart
             width={'100%'}
-            height={'300px'}
+            height={'200px'}
             chartType="PieChart"
             loader={
               <div>
