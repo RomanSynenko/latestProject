@@ -60,10 +60,10 @@ export default function Auth() {
             </div>
             <div className="login_form">
                 <p className="login_form-choice">You can use your Google Account to authorize:</p>
-                <button onClick={onClickGoogle} className='google-register'>
+                {/* <button onClick={onClickGoogle} className='google-register'>
                     <Google />
                     <span className='google-register_text'>Google</span>
-                </button>
+                </button> */}
                 <form autoComplete="off">
                     <p className="login_form-input-text">Or login to our app using e-mail and password:</p>
                     <label>
